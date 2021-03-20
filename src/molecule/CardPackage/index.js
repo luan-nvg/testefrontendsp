@@ -5,19 +5,6 @@ import React, { Component } from 'react';
 const CardPackage = () => {
 
     return (
-        // <View style={{
-        //     width: 320,
-        //     height: 500,
-        //     backgroundColor: "#0000001A",
-        //     opacity: 0.9,
-        //     marginLeft: 5,
-        //     borderRadius: 40,
-        // }}
-        //     onChange={index => this.setState({ index })}
-        // >
-
-        // </View>
-
         <View style={styles.container}>
             <View style={styles.card}>
                 <View style={styles.header}>
@@ -43,8 +30,6 @@ const CardPackage = () => {
 
                 </View>
                 <View style={{
-                    // alignItems: 'center',
-                    // justifyContent: 'center',
                     marginLeft: 45,
                     marginTop: 30
                 }}>
@@ -79,7 +64,6 @@ const CardPackage = () => {
                                 alignItems: 'center',
                                 backgroundColor: '#FF8686',
                                 padding: 15,
-                                // marginBottom: 40,
                                 borderRadius: 15,
                             }}
                             onPress={() => {
@@ -105,13 +89,8 @@ const CardPackage = () => {
 const styles = StyleSheet.create({
     container: {
         padding: 8,
-        // justifyContent: 'center',
-        // alignItems: "center"
     },
     card: {
-
-        // justifyContent: 'center',
-        // alignItems: "center",
         width: 320,
         height: 470,
         backgroundColor: "white",

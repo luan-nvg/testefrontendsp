@@ -72,8 +72,6 @@ export default class MyCarousel extends Component {
     render() {
         return (
             <View style={{
-                // flexDirection: 'row',
-                // backgroundColor: 'red',
                 justifyContent: 'center',
                 alignItems: 'center',
             }}>
