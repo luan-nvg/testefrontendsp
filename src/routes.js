@@ -12,13 +12,31 @@ const Routes = createStackNavigator({
     VirtualStore: {
         screen: VirtualStore,
         navigationOptions: ({ navigation }) => ({
-            // header: null,
+            title: 'Loja Virtual',
+            headerTitleAlign: 'center',
             tabBarVisible: true,
             headerMode: "screen",
             headerTintColor: "#fff", //cor do texto cabeçalho
             headerStyle: {
                 backgroundColor: "#FF8686" //cor do cabeçalho
-            }
+            },
+            headerRight: (
+                () => (
+                    <View style={{
+                        flexDirection: "row",
+                        justifyContent: "space-evenly",
+                        width: 120
+                    }}>
+                        <TouchableOpacity activeOpacity={0.7}
+                            onPress={() => {
+                                navigation.navigate('Counter');
+                            }}>
+                                <Text>Icone</Text>
+                        </TouchableOpacity>
+                    </View>
+                )
+            ),
+
         }),
     },
 
@@ -27,7 +45,6 @@ const Routes = createStackNavigator({
     Counter: {
         screen: Counter,
         navigationOptions: ({ navigation }) => ({
-            // header: null,
             tabBarVisible: true,
             headerMode: "screen",
             headerTintColor: "#fff", //cor do texto cabeçalho
