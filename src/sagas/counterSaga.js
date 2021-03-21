@@ -4,7 +4,6 @@ import { delay, takeEvery, takeLatest, put } from 'redux-saga/effects';
 function* increaseCounterAsync() {
   try {
     // Delay 4 Seconds
-    // yield delay(4000);
     // Dispatch Action To Redux Store
     yield put({
       type: 'INCREASE_COUNTER_ASYNC',

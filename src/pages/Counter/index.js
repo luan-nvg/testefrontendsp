@@ -1,8 +1,6 @@
 // Imports: Dependencies
-import React, { Component } from 'react'; import { Button, Dimensions, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import React, { Component } from 'react'; import {SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { connect } from 'react-redux';
-// Screen Dimensions
-const { height, width } = Dimensions.get('window');
 // Screen: Counter
 class Counter extends React.Component {
     render() {
