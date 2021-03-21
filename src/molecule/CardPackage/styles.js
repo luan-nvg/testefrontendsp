@@ -57,6 +57,6 @@ export const styles = StyleSheet.create({
         fontWeight: "bold",
         fontSize: 40,
         marginTop: '7%',
-        marginLeft: '8%'
+        marginLeft: '17%'
     }
 });

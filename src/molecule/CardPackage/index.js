@@ -3,21 +3,20 @@ import React, { Component } from 'react';
 import Buttom from '../../atoms/Button';
 import { styles } from './styles';
 
-const CardPackage = () => {
+const CardPackage = (options) => {
+    console.log(options);
     return (
         <View style={styles.card}>
             <View style={styles.header}>
-                <Text style={styles.headerTitle}>Curso básico de agilidade 2</Text>
+                <Text style={styles.headerTitle}>{options.data.item.name}</Text>
             </View>
 
             <View style={styles.details}>
-                <Text style={styles.detailsText}>{'\u2022'} Introdução </Text>
-                <Text style={styles.detailsText}>{'\u2022'} 1 </Text>
-                <Text style={styles.detailsText}>{'\u2022'} 2 </Text>
+                <Text style={styles.detailsText}>{options.data.item.description}</Text>
                 <View style={styles.detailsSpacing}>
                     <Text>
                         <Text style={[styles.detailsText, styles.detailsDuration]}> Duração: </Text>
-                        <Text style={styles.detailsText}>45 horas</Text>
+                        <Text style={styles.detailsText}>{options.data.item.duration}</Text>
                     </Text>
 
                 </View>
@@ -26,8 +25,8 @@ const CardPackage = () => {
 
             <View style={styles.investment}>
                 <Text style={styles.investmentTitle}> Investimento: </Text>
-                <Text style={styles.dollarSign}>R$</Text>
-                <Text style={styles.investmentValue}>  799.9 </Text>
+                <Text style={styles.dollarSign}>R$ </Text>
+                <Text style={styles.investmentValue}>{options.data.item.price}</Text>
             </View>
 
             <Buttom

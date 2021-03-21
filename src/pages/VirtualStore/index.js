@@ -1,6 +1,5 @@
 import { Animated, View, Button, Text, StyleSheet, ScrollView } from 'react-native';
 import React, { Component } from 'react';
-import CardPackage from '../../molecule/CardPackage'
 import MyCarousel from '../../molecule/MyCarousel'
 import { styles } from './styles';
 
