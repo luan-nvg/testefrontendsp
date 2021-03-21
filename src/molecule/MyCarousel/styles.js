@@ -30,5 +30,10 @@ export const styles = StyleSheet.create({
     },
     item: {
         alignItems: 'center',
+    },
+    containerCarousel : {
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        backgroundColor: 'red'
     }
 });

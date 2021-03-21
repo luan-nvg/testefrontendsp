@@ -58,11 +58,7 @@ const VirtualStore = () => {
                 }}
             />
             <View
-                style={{
-                    justifyContent: 'flex-start',
-                    alignItems: 'center',
-                    backgroundColor: 'red'
-                }}
+                style={styles.containerCarousel}
             >
                 <Pagination
                     dotsLength={itens.length}
