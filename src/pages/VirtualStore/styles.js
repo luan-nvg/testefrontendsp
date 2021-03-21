@@ -16,6 +16,5 @@ export const styles = StyleSheet.create({
         fontSize: 38,
         color: "#FF8686",
         fontFamily: 'FreeSansLight',
-
     }
 });
