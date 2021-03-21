@@ -32,7 +32,7 @@ export default class MyCarousel extends Component {
     _renderItem({ item, index }) {
         return (
             <View style={{
-                justifyContent: 'center',
+                // justifyContent: 'center',
                 alignItems: 'center',
             }}>
                 <CardPackage data={item} />
@@ -74,15 +74,26 @@ export default class MyCarousel extends Component {
             <View style={{
                 justifyContent: 'center',
                 alignItems: 'center',
+                // backgroundColor: '#ffff00',
+                flex: 1
             }}>
                 <Carousel
-                    sliderWidth={400}
-                    itemWidth={400}
+                    sliderWidth={500}
+                    itemWidth={500}
                     data={this.state.entries}
                     renderItem={this._renderItem}
                     onSnapToItem={(index) => this.setState({ activeSlide: index })}
                 />
-                { this.pagination}
+                <View
+                    style={{
+                        justifyContent: 'flex-start',
+                        alignItems: 'center',
+                        backgroundColor: 'red'
+                    }}
+                >
+                    { this.pagination}
+                </View>
+
             </View>
         );
     }
