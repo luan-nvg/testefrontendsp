@@ -5,9 +5,9 @@ import {
 
 export const styles = StyleSheet.create({
     card: {
-        marginTop: '2%',
+        marginTop: '7%',
         width: '65%',
-        height: '95%',
+        height: '90%',
         backgroundColor: "white",
         borderRadius: 40,
         elevation: 3,
@@ -22,6 +22,7 @@ export const styles = StyleSheet.create({
         fontSize: 30,
         marginBottom: 30,
         fontFamily: 'FreeSansBold',
+        marginTop : '5%'
 
     },
     details: {
@@ -32,7 +33,7 @@ export const styles = StyleSheet.create({
     detailsText: {
         color: "gray",
         fontSize: 20,
-        fontFamily: 'FreeSansBold',
+        fontFamily: 'FreeSansLight',
     },
     detailsSpacing: {
         marginTop: '7%'
@@ -48,11 +49,11 @@ export const styles = StyleSheet.create({
     investmentTitle: {
         color: "gray",
         fontSize: 15,
-        fontFamily: 'FreeSansBold',
+        fontFamily: 'FreeSansLight',
     },
     dollarSign: {
         fontFamily: 'FreeSansBold',
-        marginTop: '15%',
+        marginTop: '7%',
         color: "#7BBDF5",
         fontSize: 30,
         position: 'absolute',
@@ -62,7 +63,7 @@ export const styles = StyleSheet.create({
         color: "#7BBDF5",
         fontWeight: "bold",
         fontSize: 40,
-        marginTop: '7%',
-        marginLeft: '19%'
+        // marginTop: '1%',
+        marginLeft: '20%'
     }
 });
