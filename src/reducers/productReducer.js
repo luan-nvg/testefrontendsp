@@ -4,14 +4,9 @@ const initialState = {
 };
 // Redux: Counter Reducer
 const productReducer = (state = initialState, action) => {
+    console.log(action.type);
     switch (action.type) {
         case 'ADD_PRODUCTS': {
-            return {
-                ...state,
-                info: action.value,
-            };
-        }
-        case 'DECREASE_COUNTER': {
             return {
                 ...state,
                 info: action.value,

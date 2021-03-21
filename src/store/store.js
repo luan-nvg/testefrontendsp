@@ -6,12 +6,15 @@ import createSagaMiddleware from 'redux-saga';
 import rootReducer from '../reducers/index';
 // Imports: Redux Root Saga
 import { rootSaga } from '../sagas/index';
+
+import  apiMiddleware  from '../middleware/Api';
 // Middleware: Redux Saga
 const sagaMiddleware = createSagaMiddleware();
 // Redux: Store
 const store = createStore(
   rootReducer,
   applyMiddleware(
+    apiMiddleware,
     sagaMiddleware,
     createLogger(),
   ),

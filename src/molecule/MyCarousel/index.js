@@ -15,8 +15,11 @@ const renderItem = (entries) => {
 
 const MyCarousel = () => {
     const [activeSlide, setActiveSlide] = useState(0);
-    var product = useSelector(state => state.product);
-    var itens = product ? product.info : [];
+    var api = useSelector(state => state.api);
+    console.log(api);
+
+    
+    var itens = api.data ? api.data : [];
     return (
         <View style={styles.container}>
             <Carousel

@@ -4,6 +4,7 @@ const initialState = {
   };
   // Redux: Counter Reducer
   const counterReducer = (state = initialState, action) => {
+    console.log(action.type);
     switch (action.type) {
       case 'INCREASE_COUNTER_ASYNC': {
         return {
