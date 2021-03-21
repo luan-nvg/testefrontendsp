@@ -5,20 +5,18 @@ import CardPackage from '../../molecule/CardPackage'
 import { styles } from './styles';
 import { connect, useDispatch, useSelector } from "react-redux";
 
-const renderItem = (entries) => {
+const renderItem = (entries, navigation) => {
     return (
         <View style={styles.item}>
-            <CardPackage data={entries} />
+            <CardPackage data={entries} navigation={navigation} />
         </View>
     )
 }
 
-const MyCarousel = () => {
+const MyCarousel = ({ navigation }) => {
     const [activeSlide, setActiveSlide] = useState(0);
     var api = useSelector(state => state.api);
-    console.log(api);
 
-    
     var itens = api.data ? api.data : [];
     return (
         <View style={styles.container}>
@@ -26,7 +24,9 @@ const MyCarousel = () => {
                 sliderWidth={500}
                 itemWidth={500}
                 data={itens}
-                renderItem={renderItem}
+                renderItem={(item) => {
+                    return renderItem(item, navigation);
+                }}
                 onSnapToItem={(index) => {
                     setActiveSlide(index);
                 }}

@@ -4,6 +4,7 @@ import Buttom from '../../atoms/Button';
 import { styles } from './styles';
 
 const CardPackage = (options) => {
+
     return (
         <View style={styles.card}>
             <View style={styles.header}>
@@ -32,9 +33,8 @@ const CardPackage = (options) => {
                 title={'Comprar'}
                 onPress={
                     () => {
-                        if (options.data.item.action) {
-                            options.data.item.action();
-                        }
+                        console.log(options.data.item);
+                        options.navigation.navigate('Payment', options.data.item);
                     }
                 }
                 width={'70%'}

@@ -5,7 +5,7 @@ import { styles } from './styles';
 import { connect, useDispatch, useSelector } from "react-redux";
 import { fetchArticleDetails } from "../../actions/api";
 
-const VirtualStore = () => {
+const VirtualStore = ({ navigation }) => {
     const dispatch = useDispatch();
     dispatch(fetchArticleDetails());
 
@@ -15,7 +15,7 @@ const VirtualStore = () => {
                 <Text style={styles.title}>Conheça nossos</Text>
                 <Text style={styles.title}>cursos:</Text>
             </View>
-            <MyCarousel></MyCarousel>
+            <MyCarousel navigation={navigation} ></MyCarousel>
         </View>
     );
 };
