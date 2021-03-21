@@ -4,7 +4,6 @@ import Buttom from '../../atoms/Button';
 import { styles } from './styles';
 
 const CardPackage = (options) => {
-    console.log(options);
     return (
         <View style={styles.card}>
             <View style={styles.header}>
@@ -33,7 +32,9 @@ const CardPackage = (options) => {
                 title={'Comprar'}
                 onPress={
                     () => {
-                        alert("Ok")
+                        if (options.data.item.action) {
+                            options.data.item.action();
+                        }
                     }
                 }
                 width={'70%'}

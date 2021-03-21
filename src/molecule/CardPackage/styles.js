@@ -20,7 +20,9 @@ export const styles = StyleSheet.create({
         color: "#707070",
         fontWeight: "bold",
         fontSize: 30,
-        marginBottom: 30
+        marginBottom: 30,
+        fontFamily: 'FreeSansBold',
+
     },
     details: {
         alignItems: 'flex-start',
@@ -30,12 +32,14 @@ export const styles = StyleSheet.create({
     detailsText: {
         color: "gray",
         fontSize: 20,
+        fontFamily: 'FreeSansBold',
     },
     detailsSpacing: {
         marginTop: '7%'
     },
     detailsDuration: {
-        fontWeight: "bold"
+        fontWeight: "bold",
+        fontFamily: 'FreeSansBold',
     },
     investment: {
         marginLeft: '25%',
@@ -43,20 +47,22 @@ export const styles = StyleSheet.create({
     },
     investmentTitle: {
         color: "gray",
-        fontSize: 15
+        fontSize: 15,
+        fontFamily: 'FreeSansBold',
     },
     dollarSign: {
+        fontFamily: 'FreeSansBold',
         marginTop: '15%',
         color: "#7BBDF5",
         fontSize: 30,
-        marginRight: '10%',
         position: 'absolute',
     },
     investmentValue: {
+        fontFamily: 'FreeSansBold',
         color: "#7BBDF5",
         fontWeight: "bold",
         fontSize: 40,
         marginTop: '7%',
-        marginLeft: '17%'
+        marginLeft: '19%'
     }
 });

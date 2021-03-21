@@ -15,7 +15,10 @@ const VirtualStore = () => {
             "description": "• Introdução 1\n• Metodologias 1\n• PSF 1",
             "duration": "45 horas",
             "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.ZCkkxcgAP4pxXbz3I58DZQHaEK%26pid%3DApi&f=1",
-            "price": 799.9
+            "price": 799.9,
+            "action": () => {
+                alert('qq');
+            }
         },
         {
             "id": "12",
@@ -23,7 +26,8 @@ const VirtualStore = () => {
             "description": "• Introdução 2\n• Metodologias 2\n• PSF 2",
             "duration": "35 horas",
             "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.sympla.com.br%2F5fcd4f6cd4fed.jpg&f=1&nofb=1",
-            "price": 899.9
+            "price": 899.9,
+            
         },
         {
             "id": "14",
@@ -45,7 +49,6 @@ const VirtualStore = () => {
 const renderItem = (entries) => {
     return (
         <View style={{
-            // justifyContent: 'center',
             alignItems: 'center',
         }}>
             <CardPackage data={entries} />

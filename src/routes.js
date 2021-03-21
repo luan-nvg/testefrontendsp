@@ -8,7 +8,6 @@ import VirtualStore from './pages/VirtualStore';
 import Counter from './pages/Counter'
 
 const Routes = createStackNavigator({
-
     VirtualStore: {
         screen: VirtualStore,
         navigationOptions: ({ navigation }) => ({
@@ -39,9 +38,6 @@ const Routes = createStackNavigator({
 
         }),
     },
-
-
-
     Counter: {
         screen: Counter,
         navigationOptions: ({ navigation }) => ({
@@ -53,8 +49,6 @@ const Routes = createStackNavigator({
             }
         }),
     },
-
-
     PurchaseMade: {
         screen: PurchaseMade,
         navigationOptions: ({ navigation }) => ({
@@ -67,12 +61,7 @@ const Routes = createStackNavigator({
             }
         }),
     },
-
-
 });
-
-
-
 
 Routes.navigationOptions = {
     // Hide the header from AppNavigator stack
