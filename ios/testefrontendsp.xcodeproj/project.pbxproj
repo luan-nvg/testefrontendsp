@@ -12,6 +12,16 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		7ECFD261FDBE422DA3A5D13F /* Nimbus-Sans-D-OT-Light_32752.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91A9D801EB134885A631CFBF /* Nimbus-Sans-D-OT-Light_32752.ttf */; };
+		51477291BCCC484BAEAE0375 /* Nimbus-Sans-D-OT-Ultra-Light_32757.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4103C4D1D4C459EA0ED47 /* Nimbus-Sans-D-OT-Ultra-Light_32757.ttf */; };
+		A1110693A54A406080969817 /* teste1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10D347CFF5C4453BA0D06A58 /* teste1.ttf */; };
+		7219756772FA41BBBEF999AA /* teste3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22EB643DB37C437F888F31C6 /* teste3.ttf */; };
+		B061D2F8F5D24EC9AC869576 /* Nimbus Sans D OT Ultra Light font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDC618DC89EF40479098AC87 /* Nimbus Sans D OT Ultra Light font.ttf */; };
+		ADCD8497DDEA424183768751 /* ubuntu-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8088FC0378AE4308AC8CCF67 /* ubuntu-bold.ttf */; };
+		5CAFEA92A574474E9CC43C77 /* Nimbus.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F201D7D970546F591A51726 /* Nimbus.ttf */; };
+		1EEBD0BC1A594440BCC70B09 /* FreeSansBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE0E56ED1E3447FCBFD63B0C /* FreeSansBold.otf */; };
+		1BA192B5BF814A3ABA622EE5 /* FreeSansLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFB3BCB0043E41269754EA3F /* FreeSansLight.ttf */; };
+		7450E138FAF24281A3F06ED2 /* FreeSansMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DB62B5BC7C44C23AD14EB35 /* FreeSansMedium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +46,16 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = testefrontendsp/main.m; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = testefrontendsp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		91A9D801EB134885A631CFBF /* Nimbus-Sans-D-OT-Light_32752.ttf */ = {isa = PBXFileReference; name = "Nimbus-Sans-D-OT-Light_32752.ttf"; path = "../assets/fonts/Nimbus-Sans-D-OT-Light_32752.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4EB4103C4D1D4C459EA0ED47 /* Nimbus-Sans-D-OT-Ultra-Light_32757.ttf */ = {isa = PBXFileReference; name = "Nimbus-Sans-D-OT-Ultra-Light_32757.ttf"; path = "../assets/fonts/Nimbus-Sans-D-OT-Ultra-Light_32757.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		10D347CFF5C4453BA0D06A58 /* teste1.ttf */ = {isa = PBXFileReference; name = "teste1.ttf"; path = "../assets/fonts/teste1.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		22EB643DB37C437F888F31C6 /* teste3.ttf */ = {isa = PBXFileReference; name = "teste3.ttf"; path = "../assets/fonts/teste3.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EDC618DC89EF40479098AC87 /* Nimbus Sans D OT Ultra Light font.ttf */ = {isa = PBXFileReference; name = "Nimbus Sans D OT Ultra Light font.ttf"; path = "../assets/fonts/Nimbus Sans D OT Ultra Light font.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8088FC0378AE4308AC8CCF67 /* ubuntu-bold.ttf */ = {isa = PBXFileReference; name = "ubuntu-bold.ttf"; path = "../assets/fonts/ubuntu-bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8F201D7D970546F591A51726 /* Nimbus.ttf */ = {isa = PBXFileReference; name = "Nimbus.ttf"; path = "../assets/fonts/Nimbus.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DE0E56ED1E3447FCBFD63B0C /* FreeSansBold.otf */ = {isa = PBXFileReference; name = "FreeSansBold.otf"; path = "../assets/fonts/FreeSansBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AFB3BCB0043E41269754EA3F /* FreeSansLight.ttf */ = {isa = PBXFileReference; name = "FreeSansLight.ttf"; path = "../assets/fonts/FreeSansLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8DB62B5BC7C44C23AD14EB35 /* FreeSansMedium.ttf */ = {isa = PBXFileReference; name = "FreeSansMedium.ttf"; path = "../assets/fonts/FreeSansMedium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +129,7 @@
 				00E356EF1AD99517003FC87E /* testefrontendspTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				6B46E8709D40495FBF897D8D /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -123,6 +144,24 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		6B46E8709D40495FBF897D8D /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				91A9D801EB134885A631CFBF /* Nimbus-Sans-D-OT-Light_32752.ttf */,
+				4EB4103C4D1D4C459EA0ED47 /* Nimbus-Sans-D-OT-Ultra-Light_32757.ttf */,
+				10D347CFF5C4453BA0D06A58 /* teste1.ttf */,
+				22EB643DB37C437F888F31C6 /* teste3.ttf */,
+				EDC618DC89EF40479098AC87 /* Nimbus Sans D OT Ultra Light font.ttf */,
+				8088FC0378AE4308AC8CCF67 /* ubuntu-bold.ttf */,
+				8F201D7D970546F591A51726 /* Nimbus.ttf */,
+				DE0E56ED1E3447FCBFD63B0C /* FreeSansBold.otf */,
+				AFB3BCB0043E41269754EA3F /* FreeSansLight.ttf */,
+				8DB62B5BC7C44C23AD14EB35 /* FreeSansMedium.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -214,6 +253,16 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				7ECFD261FDBE422DA3A5D13F /* Nimbus-Sans-D-OT-Light_32752.ttf in Resources */,
+				51477291BCCC484BAEAE0375 /* Nimbus-Sans-D-OT-Ultra-Light_32757.ttf in Resources */,
+				A1110693A54A406080969817 /* teste1.ttf in Resources */,
+				7219756772FA41BBBEF999AA /* teste3.ttf in Resources */,
+				B061D2F8F5D24EC9AC869576 /* Nimbus Sans D OT Ultra Light font.ttf in Resources */,
+				ADCD8497DDEA424183768751 /* ubuntu-bold.ttf in Resources */,
+				5CAFEA92A574474E9CC43C77 /* Nimbus.ttf in Resources */,
+				1EEBD0BC1A594440BCC70B09 /* FreeSansBold.otf in Resources */,
+				1BA192B5BF814A3ABA622EE5 /* FreeSansLight.ttf in Resources */,
+				7450E138FAF24281A3F06ED2 /* FreeSansMedium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

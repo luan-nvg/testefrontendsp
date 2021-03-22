@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -51,5 +51,18 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Nimbus-Sans-D-OT-Light_32752.ttf</string>
+		<string>Nimbus-Sans-D-OT-Ultra-Light_32757.ttf</string>
+		<string>teste1.ttf</string>
+		<string>teste3.ttf</string>
+		<string>Nimbus Sans D OT Ultra Light font.ttf</string>
+		<string>ubuntu-bold.ttf</string>
+		<string>Nimbus.ttf</string>
+		<string>FreeSansBold.otf</string>
+		<string>FreeSansLight.ttf</string>
+		<string>FreeSansMedium.ttf</string>
+	</array>
 </dict>
 </plist>
