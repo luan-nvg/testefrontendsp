@@ -31,7 +31,7 @@ const Routes = createStackNavigator({
     Counter: {
         screen: Counter,
         navigationOptions: ({ navigation }) => {
-            return Header({ title: 'Contador' })
+            return Header({ title: 'Carrinho' })
         },
     },
     PurchaseMade: {

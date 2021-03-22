@@ -1,27 +1,27 @@
+import { object } from "yup/lib/locale";
+
 // Initial State
 const initialState = {
-    counter: 0,
-  };
-  // Redux: Counter Reducer
-  const counterReducer = (state = initialState, action) => {
-    console.log(action.type);
-    switch (action.type) {
-      case 'INCREASE_COUNTER_ASYNC': {
-        return {
-          ...state,
-          counter: state.counter + action.value,
-        };
-      }
-      case 'DECREASE_COUNTER': {
-        return {
-          ...state,
-          counter: state.counter - action.value,
-        };
-      }
-      default: {
-        return state;
-      }
+  counter: [],
+};
+// Redux: Counter Reducer
+const counterReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'INCREASE_COUNTER_ASYNC': {
+      return {
+        counter: state.counter.push(action.value)
+      };
     }
-  };
-  // Exports
-  export default counterReducer;
+    case 'DECREASE_COUNTER': {
+      return {
+        ...state,
+        counter: state.counter - action.value,
+      };
+    }
+    default: {
+      return state;
+    }
+  }
+};
+// Exports
+export default counterReducer;

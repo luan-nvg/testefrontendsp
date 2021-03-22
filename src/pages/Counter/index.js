@@ -1,24 +1,23 @@
 // Imports: Dependencies
-import React, { Component } from 'react'; import {SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import React, { Component } from 'react'; import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { connect } from 'react-redux';
 // Screen: Counter
-class Counter extends React.Component {
-    render() {
-        return (
-            <SafeAreaView style={styles.container}>
-                <Text style={styles.counterTitle}>Counter</Text>
-                <View style={styles.counterContainer}>
-                    <TouchableOpacity onPress={this.props.reduxIncreaseCounter}>
-                        <Text style={styles.buttonText}>+</Text>
-                    </TouchableOpacity>
-                    <Text style={styles.counterText}>{this.props.counter}</Text>
-                    <TouchableOpacity onPress={this.props.reduxDecreaseCounter}>
-                        <Text style={styles.buttonText}>-</Text>
-                    </TouchableOpacity>
-                </View>
-            </SafeAreaView>
-        )
-    }
+const Counter = () => {
+    return (
+        <View></View>
+        // <SafeAreaView style={styles.container}>
+        //     <Text style={styles.counterTitle}>Counter</Text>
+        //     <View style={styles.counterContainer}>
+        //         <TouchableOpacity onPress={this.props.reduxIncreaseCounter}>
+        //             <Text style={styles.buttonText}>+</Text>
+        //         </TouchableOpacity>
+        //         {/* <Text style={styles.counterText}>{this.props.counter}</Text> */}
+        //         <TouchableOpacity onPress={this.props.reduxDecreaseCounter}>
+        //             <Text style={styles.buttonText}>-</Text>
+        //         </TouchableOpacity>
+        //     </View>
+        // </SafeAreaView>
+    )
 }
 // Styles
 const styles = StyleSheet.create({
@@ -54,30 +53,6 @@ const styles = StyleSheet.create({
         marginRight: 40,
     },
 });
-// Map State To Props (Redux Store Passes State To Component)
-const mapStateToProps = (state) => {
-    console.log('State:');
-    console.log(state);
-    // Redux Store --> Component
-    return {
-        counter: state.counter.counter,
-    };
-};
-// Map Dispatch To Props (Dispatch Actions To Reducers. Reducers Then Modify The Data And Assign It To Your Props)
-const mapDispatchToProps = (dispatch) => {
-    // Action
-    return {
-        // Increase Counter
-        reduxIncreaseCounter: () => dispatch({
-            type: 'INCREASE_COUNTER',
-            value: 1,
-        }),
-        // Decrease Counter
-        reduxDecreaseCounter: () => dispatch({
-            type: 'DECREASE_COUNTER',
-            value: 1,
-        }),
-    };
-};
+
 // Exports
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default Counter;

@@ -6,13 +6,7 @@ import { Provider } from 'react-redux';
 // Imports: Redux Store
 import { store } from './store/store';
 
-
-
 const App = () => {
-	// useEffect(() => {
-	// 	SplashScreen.hide();
-	// }, []);
-
 	return (
 		<SafeAreaView style={{ flex: 1 }}>
 			<StatusBar barStyle="light-content" backgroundColor="#FF8686" />
