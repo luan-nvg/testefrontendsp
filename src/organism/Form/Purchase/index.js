@@ -30,9 +30,14 @@ const DispatchFormik = (dispatch, options) => {
     });
 }
 
+const save = (options, values) => {
+    options.navigation.navigate('PurchaseMade');
+}
+
+
 const Purchase = (options) => {
     const dispatch = useDispatch();
-    
+
     var item = options.navigation.state.params;
     var descont = (item.price * 10) / 100;
     var total = item.price - descont;
@@ -51,7 +56,7 @@ const Purchase = (options) => {
             <Formik
                 initialValues={{ card_number: '', name: '', validate: '', cvv: '', }}
                 onSubmit={(values) => {
-                    this.save(values);
+                    save(options, values);
                 }}
                 validationSchema={yup.object().shape({
 
@@ -209,14 +214,7 @@ const Purchase = (options) => {
 
                             </View>
 
-
-                            <View
-                                style={{
-                                    borderBottomColor: '#CCCCCC',
-                                    borderBottomWidth: 1,
-                                    marginTop: '5%'
-                                }}
-                            />
+                            <View style={styles.lineOne} />
 
                             <View style={[styles.sideBySide, styles.desc]}>
                                 <Text style={styles.namePrice}>
@@ -224,8 +222,6 @@ const Purchase = (options) => {
                                 </Text>
                                 <Text style={styles.price} >{value_package}</Text>
                             </View>
-
-
 
                             <View style={[styles.sideBySide, styles.desc]}>
                                 <Text style={styles.nameDiscount}>
@@ -235,13 +231,8 @@ const Purchase = (options) => {
                             </View>
 
                             <View
-                                style={{
-                                    borderBottomColor: '#CCCCCC',
-                                    borderBottomWidth: 1,
-                                    marginTop: '4%'
-                                }}
+                                style={styles.lineTwo}
                             />
-
 
                             <View style={[styles.sideBySide, styles.desc]}>
                                 <Text style={styles.nameTotal}>
@@ -249,13 +240,12 @@ const Purchase = (options) => {
                             </Text>
                                 <Text style={styles.total} >{total_format}</Text>
                             </View>
-                            <View style={{ marginBottom: '4%' }}>
+                            <View style={styles.divisionBottom}>
                                 <Buttom
                                     title={'Pagar'}
                                     onPress={
                                         () => {
-
-                                            options.navigation.navigate('PurchaseMade');
+                                            formik.handleSubmit();
                                         }
                                     }
                                     padding={'3%'}

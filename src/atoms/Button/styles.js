@@ -11,7 +11,9 @@ export const styles = StyleSheet.create({
     },
     Text: {
         color: '#ffff',
-        fontSize: 20
+        fontSize: 20,
+        fontFamily: 'FreeSansLight',
+
     },
     opacity: {
         alignItems: 'center',

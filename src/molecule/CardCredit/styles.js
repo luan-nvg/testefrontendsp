@@ -52,7 +52,7 @@ export const styles = StyleSheet.create({
     },
     finaly_card: {
         fontFamily: 'FreeSansBold',
-        fontSize: 30,
+        fontSize: 27,
         marginLeft: '5%',
         color: "white",
         marginTop: '5%'

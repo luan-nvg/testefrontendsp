@@ -66,6 +66,22 @@ export const styles = StyleSheet.create({
         fontSize: 20,
     },
     TextInvalid: {
-
+        fontFamily: 'FreeSansLight',
     },
+
+    divisionBottom: {
+        marginBottom: '6%'
+    },
+
+    lineOne: {
+        borderBottomColor: '#CCCCCC',
+        borderBottomWidth: 1,
+        marginTop: '5%'
+    },
+    lineTwo: {
+        borderBottomColor: '#CCCCCC',
+        borderBottomWidth: 1,
+        marginTop: '4%'
+    }
+
 });
