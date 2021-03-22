@@ -34,6 +34,6 @@ export const styles = StyleSheet.create({
     containerCarousel : {
         justifyContent: 'flex-start',
         alignItems: 'center',
-        backgroundColor: 'red'
+        backgroundColor: '#FFFFFF'
     }
 });

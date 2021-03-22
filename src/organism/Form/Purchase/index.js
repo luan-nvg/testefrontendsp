@@ -58,8 +58,7 @@ const Purchase = (options) => {
         }}>
 
             <Formik
-                initialValues={{ card_number: '0000 0000 0000 0000', name: 'Luan Santana', validate: '02/20', cvv: '222', }}
-                // initialValues={{ card_number: '', name: '', validate: '', cvv: '', }}
+                initialValues={{ card_number: '', name: '', validate: '', cvv: '', }}
                 onSubmit={(values) => {
                     save(options, dispatch, values);
                 }}

@@ -1,9 +1,10 @@
 import { Animated, View, Button, Text, StyleSheet, ScrollView } from 'react-native';
-import React, { Component, useEffect } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import MyCarousel from '../../molecule/MyCarousel'
 import { styles } from './styles';
 import { connect, useDispatch, useSelector } from "react-redux";
 import { fetchArticleDetails } from "../../actions/api";
+
 
 const VirtualStore = ({ navigation }) => {
     const dispatch = useDispatch();
@@ -21,3 +22,6 @@ const VirtualStore = ({ navigation }) => {
 };
 
 export default VirtualStore;
+
+
+
