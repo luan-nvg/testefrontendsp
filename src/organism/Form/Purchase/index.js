@@ -1,7 +1,7 @@
-import { Formik } from 'formik';
+import { Formik, useFormikContext } from 'formik';
 import * as yup from 'yup';
 
-import { Animated, View, Text, TouchableOpacity } from 'react-native';
+import { Animated, View, Text, ScrollView } from 'react-native';
 import React, { Component, Fragment } from 'react';
 import { styles } from './styles';
 import { TextInput } from 'react-native-paper';
@@ -9,7 +9,16 @@ import TextInputMask from 'react-native-text-input-mask';
 import Helpers from '../../../Helps';
 import Buttom from '../../../atoms/Button';
 
+const AutoSubmitToken = () => {
+    // Grab values and submitForm from context
+    const { values, submitForm } = useFormikContext();
+    console.log(values);
+    return null;
+};
+
 const Purchase = (options) => {
+
+
     var item = options.navigation.state.params;
     var descont = (item.price * 10) / 100;
     var total = item.price - descont;
@@ -53,170 +62,175 @@ const Purchase = (options) => {
 
             >
                 {formik => (
-                    <Fragment>
+                    <ScrollView>
+                        <Fragment>
 
-                        <View style={styles.containerInput}>
-                            <TextInput
-                                mode={'outlined'}
-                                label="Número do cartão de crédito"
-                                onChangeText={formik.handleChange('card_number')}
-                                onBlur={formik.handleBlur('card_number')}
-                                keyboardType='decimal-pad'
-                                autoCapitalize="words" //verificar oq é 
-                                maxLength={100}
-                                style={!formik.errors.card_number ? styles.textInput : styles.TextInvalid}
-                                value={formik.values.card_number}
-                                render={props =>
-                                    <TextInputMask
-                                        {...props}
-                                        mask="[0000] [0000] [0000] [0000]"
-                                    />
-                                }
-                            >
-                            </TextInput>
-                            {formik.errors && formik.errors.card_number ?
-                                <Text style={styles.TextError}>{formik.errors.card_number}</Text>
-                                : null
-                            }
-                        </View>
-
-                        <View style={styles.containerInput}>
-                            <TextInput
-                                mode={'outlined'}
-                                label="Nome"
-                                onChangeText={formik.handleChange('name')}
-                                onBlur={formik.handleBlur('name')}
-                                autoCapitalize="words" //verificar oq é 
-                                maxLength={100}
-                                style={!formik.errors.name ? styles.textInput : styles.TextInvalid}
-                                value={formik.values.name}
-                            >
-                            </TextInput>
-                            {formik.errors && formik.errors.name ?
-                                <Text style={styles.TextError}>{formik.errors.name}</Text>
-                                : null
-                            }
-                        </View>
-
-
-                        <View style={styles.sideBySideSpace}>
-                            <TextInput
-                                mode={'outlined'}
-                                label="Validade"
-                                onChangeText={formik.handleChange('validate')}
-                                onBlur={formik.handleBlur('validate')}
-                                value={formik.values.validate}
-                                keyboardType='decimal-pad'
-                                autoCapitalize="words" //verificar oq é 
-                                maxLength={100}
-                                style={!formik.errors.validate ? [styles.textInput, styles.inputValidate] : [styles.TextInvalid, styles.inputValidate]}
-                                value={formik.values.validate}
-                                render={props =>
-                                    <TextInputMask
-                                        {...props}
-                                        mask="[00]/[00]"
-                                    />
-                                }
-
-                            >
-                            </TextInput>
-
-                            <TextInput
-                                mode={'outlined'}
-                                label="CVV"
-                                onChangeText={formik.handleChange('cvv')}
-                                onBlur={formik.handleBlur('cvv')}
-                                value={formik.values.cvv}
-                                keyboardType='decimal-pad'
-                                autoCapitalize="words" //verificar oq é 
-                                maxLength={100}
-                                style={!formik.errors.cvv ? [styles.textInput, styles.inputCvv] : [styles.TextInvalid, styles.inputCvv]}
-                                value={formik.values.cvv}
-                                render={props =>
-                                    <TextInputMask
-                                        {...props}
-                                        mask="[0000]"
-                                    />
-                                }
-
-                            >
-                            </TextInput>
-
-                        </View>
-
-                        <View style={styles.sideBySideSpace}>
-                            <View style={styles.inputValidate}>
-                                {formik.errors && formik.errors.validate &&
-                                    <Text style={styles.TextError}>{formik.errors.validate}</Text>
-                                }
-                            </View>
-                            <View style={styles.inputCvv}>
-                                {formik.errors && formik.errors.cvv &&
-                                    <Text style={styles.TextError}>{formik.errors.cvv}</Text>
+                            <View style={styles.containerInput}>
+                                <TextInput
+                                    mode={'outlined'}
+                                    label="Número do cartão de crédito"
+                                    onChangeText={formik.handleChange('card_number')}
+                                    onBlur={formik.handleBlur('card_number')}
+                                    keyboardType='decimal-pad'
+                                    autoCapitalize="words" //verificar oq é 
+                                    maxLength={100}
+                                    style={!formik.errors.card_number ? styles.textInput : styles.TextInvalid}
+                                    value={formik.values.card_number}
+                                    render={props =>
+                                        <TextInputMask
+                                            {...props}
+                                            mask="[0000] [0000] [0000] [0000]"
+                                        />
+                                    }
+                                >
+                                </TextInput>
+                                {formik.errors && formik.errors.card_number ?
+                                    <Text style={styles.TextError}>{formik.errors.card_number}</Text>
+                                    : null
                                 }
                             </View>
 
-                        </View>
-
-
-                        <View
-                            style={{
-                                borderBottomColor: '#CCCCCC',
-                                borderBottomWidth: 1,
-                                marginTop: '9%'
-                            }}
-                        />
-
-                        <View style={[styles.sideBySide, styles.desc]}>
-                            <Text style={styles.namePrice}>
-                                {options.navigation.getParam('name')}
-                            </Text>
-                            <Text style={styles.price} >{value_package}</Text>
-                        </View>
-
-
-
-                        <View style={[styles.sideBySide, styles.desc]}>
-                            <Text style={styles.nameDiscount}>
-                                Desconto 10%
-                            </Text>
-                            <Text style={styles.discount} >{descont_format}</Text>
-                        </View>
-
-                        <View
-                            style={{
-                                borderBottomColor: '#CCCCCC',
-                                borderBottomWidth: 1,
-                                marginTop: '4%'
-                            }}
-                        />
-
-
-                        <View style={[styles.sideBySide, styles.desc]}>
-                            <Text style={styles.nameTotal}>
-                                Total:
-                            </Text>
-                            <Text style={styles.total} >{total_format}</Text>
-                        </View>
-
-                        <Buttom
-                            title={'Pagar'}
-                            onPress={
-                                () => {
-
-                                    options.navigation.navigate('PurchaseMade');
+                            <View style={styles.containerInput}>
+                                <TextInput
+                                    mode={'outlined'}
+                                    label="Nome"
+                                    onChangeText={formik.handleChange('name')}
+                                    onBlur={formik.handleBlur('name')}
+                                    autoCapitalize="words" //verificar oq é 
+                                    maxLength={100}
+                                    style={!formik.errors.name ? styles.textInput : styles.TextInvalid}
+                                    value={formik.values.name}
+                                >
+                                </TextInput>
+                                {formik.errors && formik.errors.name ?
+                                    <Text style={styles.TextError}>{formik.errors.name}</Text>
+                                    : null
                                 }
-                            }
-                            padding={'3%'}
-                            width={'100%'}
-                        ></Buttom>
-                    </Fragment>
+                            </View>
+
+
+                            <View style={styles.sideBySideSpace}>
+                                <TextInput
+                                    mode={'outlined'}
+                                    label="Validade"
+                                    onChangeText={formik.handleChange('validate')}
+                                    onBlur={formik.handleBlur('validate')}
+                                    value={formik.values.validate}
+                                    keyboardType='decimal-pad'
+                                    autoCapitalize="words" //verificar oq é 
+                                    maxLength={100}
+                                    style={!formik.errors.validate ? [styles.textInput, styles.inputValidate] : [styles.TextInvalid, styles.inputValidate]}
+                                    value={formik.values.validate}
+                                    render={props =>
+                                        <TextInputMask
+                                            {...props}
+                                            mask="[00]/[00]"
+                                        />
+                                    }
+
+                                >
+                                </TextInput>
+
+                                <TextInput
+                                    mode={'outlined'}
+                                    label="CVV"
+                                    onChangeText={formik.handleChange('cvv')}
+                                    onBlur={formik.handleBlur('cvv')}
+                                    value={formik.values.cvv}
+                                    keyboardType='decimal-pad'
+                                    autoCapitalize="words" //verificar oq é 
+                                    maxLength={100}
+                                    style={!formik.errors.cvv ? [styles.textInput, styles.inputCvv] : [styles.TextInvalid, styles.inputCvv]}
+                                    value={formik.values.cvv}
+                                    render={props =>
+                                        <TextInputMask
+                                            {...props}
+                                            mask="[0000]"
+                                        />
+                                    }
+
+                                >
+                                </TextInput>
+
+                            </View>
+
+                            <View style={styles.sideBySideSpace}>
+                                <View style={styles.inputValidate}>
+                                    {formik.errors && formik.errors.validate &&
+                                        <Text style={styles.TextError}>{formik.errors.validate}</Text>
+                                    }
+                                </View>
+                                <View style={styles.inputCvv}>
+                                    {formik.errors && formik.errors.cvv &&
+                                        <Text style={styles.TextError}>{formik.errors.cvv}</Text>
+                                    }
+                                </View>
+
+                            </View>
+
+
+                            <View
+                                style={{
+                                    borderBottomColor: '#CCCCCC',
+                                    borderBottomWidth: 1,
+                                    marginTop: '5%'
+                                }}
+                            />
+
+                            <View style={[styles.sideBySide, styles.desc]}>
+                                <Text style={styles.namePrice}>
+                                    {options.navigation.getParam('name')}
+                                </Text>
+                                <Text style={styles.price} >{value_package}</Text>
+                            </View>
+
+
+
+                            <View style={[styles.sideBySide, styles.desc]}>
+                                <Text style={styles.nameDiscount}>
+                                    Desconto 10%
+                            </Text>
+                                <Text style={styles.discount} >{descont_format}</Text>
+                            </View>
+
+                            <View
+                                style={{
+                                    borderBottomColor: '#CCCCCC',
+                                    borderBottomWidth: 1,
+                                    marginTop: '4%'
+                                }}
+                            />
+
+
+                            <View style={[styles.sideBySide, styles.desc]}>
+                                <Text style={styles.nameTotal}>
+                                    Total:
+                            </Text>
+                                <Text style={styles.total} >{total_format}</Text>
+                            </View>
+                            <View style={{ marginBottom: '4%' }}>
+                                <Buttom
+                                    title={'Pagar'}
+                                    onPress={
+                                        () => {
+
+                                            options.navigation.navigate('PurchaseMade');
+                                        }
+                                    }
+                                    padding={'3%'}
+                                    width={'100%'}
+                                ></Buttom>
+                            </View>
+
+                            <AutoSubmitToken />
+
+
+                        </Fragment>
+                    </ScrollView>
                 )}
             </Formik>
-
         </View >
-
-
     );
+
 };
 export default Purchase;

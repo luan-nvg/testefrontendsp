@@ -5,17 +5,18 @@ import {
 
 export const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        // flex: 1,
         backgroundColor: "white",
         alignItems: 'center',
     },
     card: {
-        marginTop: '7%',
+        marginTop: '5%',
         width: '85%',
-        height: '26%',
+        height: 200,
         backgroundColor: "#7BBDF5",
         borderRadius: 20,
         elevation: 3,
+        marginBottom: '5%'
     },
     item: {
         alignItems: 'center',
@@ -54,7 +55,7 @@ export const styles = StyleSheet.create({
         fontSize: 30,
         marginLeft: '5%',
         color: "white",
-        marginTop: '3%'
+        marginTop: '5%'
     },
 
     card_label_name: {
