@@ -32,9 +32,9 @@ const DispatchFormik = (dispatch, options) => {
 
 const save = (options, dispatch, values) => {
     options.navigation.navigate('PurchaseMade');
-    var itens = Object.assign(options.navigation.state.params, values);
+    // var itens = Object.assign(options.navigation.state.params, values);
 
-    console.log(itens);
+    // console.log(itens);
 
 }
 
@@ -58,7 +58,7 @@ const Purchase = (options) => {
         }}>
 
             <Formik
-                initialValues={{ card_number: '', name: '', validate: '', cvv: '', }}
+                initialValues={{ card_number: '', name_card: '', validate: '', cvv: '', }}
                 onSubmit={(values) => {
                     save(options, dispatch, values);
                 }}
@@ -69,7 +69,7 @@ const Purchase = (options) => {
                         .required('Informe o Número do cartão!')
                         .min(19, 'O Número do cartão deve conter no minimo  16 números!')
                         .max(19, 'O Número do cartão deve conter no máximo 16 números!'),
-                    name: yup
+                    name_card: yup
                         .string()
                         .required('Informe o Nome impresso no cartão!'),
                     cvv: yup
@@ -128,20 +128,20 @@ const Purchase = (options) => {
                                     onChangeText={(value) => {
                                         DispatchFormik(dispatch, {
                                             formik: formik,
-                                            type: 'name',
+                                            type: 'name_card',
                                             value
                                         })
                                     }}
 
-                                    onBlur={formik.handleBlur('name')}
+                                    onBlur={formik.handleBlur('name_card')}
                                     autoCapitalize="words" //verificar oq é 
                                     maxLength={100}
-                                    style={!formik.errors.name ? styles.textInput : styles.TextInvalid}
-                                    value={formik.values.name}
+                                    style={!formik.errors.name_card ? styles.textInput : styles.TextInvalid}
+                                    value={formik.values.name_card}
                                 >
                                 </TextInput>
-                                {formik.errors && formik.errors.name ?
-                                    <Text style={styles.TextError}>{formik.errors.name}</Text>
+                                {formik.errors && formik.errors.name_card ?
+                                    <Text style={styles.TextError}>{formik.errors.name_card}</Text>
                                     : null
                                 }
                             </View>
@@ -222,7 +222,7 @@ const Purchase = (options) => {
 
                             <View style={[styles.sideBySide, styles.desc]}>
                                 <Text style={styles.namePrice}>
-                                    {options.navigation.getParam('name')}
+                                    {item.name}
                                 </Text>
                                 <Text style={styles.price} >{value_package}</Text>
                             </View>

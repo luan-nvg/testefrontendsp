@@ -42,7 +42,7 @@ const CardCredit = (options) => {
             <View style={{ flexDirection: 'row' }}>
                 <View style={styles.division_card_name}>
                     <Text style={styles.card_name} >
-                        {card.name}
+                        {card.name_card}
                     </Text>
                 </View>
 
