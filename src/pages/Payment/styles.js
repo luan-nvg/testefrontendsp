@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
     card: {
         marginTop: '7%',
         width: '85%',
-        height: '25%',
+        height: '26%',
         backgroundColor: "#7BBDF5",
         borderRadius: 20,
         elevation: 3,
@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
         marginTop: '7%',
         marginLeft: '5%',
         width: '18%',
-        height: 45,
+        height: 42,
         backgroundColor: "#FFDC7E",
         borderRadius: 10,
         elevation: 3,
@@ -47,7 +47,52 @@ export const styles = StyleSheet.create({
         height: 42,
         borderRadius: 42 / 2,
         backgroundColor: "#FFDC7E",
-        marginLeft : '28%'
-    }
+        marginLeft: '28%'
+    },
+    finaly_card: {
+        fontFamily: 'FreeSansBold',
+        fontSize: 30,
+        marginLeft: '5%',
+        color: "white",
+        marginTop: '3%'
+    },
+
+    card_label_name: {
+        fontFamily: 'FreeSansLight',
+        fontSize: 12,
+        color: "white",
+        marginLeft: '5%'
+    },
+    card_label_validate: {
+        fontFamily: 'FreeSansLight',
+        fontSize: 12,
+        color: "white",
+        marginLeft: '48%'
+    },
+    card_label_cvv: {
+        fontFamily: 'FreeSansLight',
+        fontSize: 12,
+        color: "white",
+        marginLeft: '10%'
+    },
+
+    card_name: {
+        fontFamily: 'FreeSansMedium',
+        fontSize: 13,
+        color: "white",
+        marginLeft: '5%'
+    },
+    card_validate: {
+        fontFamily: 'FreeSansMedium',
+        fontSize: 13,
+        color: "white",
+        marginLeft: '15%'
+    },
+    card_cvv: {
+        fontFamily: 'FreeSansMedium',
+        fontSize: 13,
+        color: "white",
+        marginLeft: '10%'
+    },
 
 });

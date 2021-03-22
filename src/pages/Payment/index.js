@@ -18,17 +18,48 @@ const Payment = (options) => {
                         <View style={styles.circleOne}></View>
                         <View style={styles.circleTwo}></View>
                     </View>
-
-
                 </View>
 
+                <View>
+                    <Text style={styles.finaly_card} >
+                        •••• •••• •••• •••• 1234
+                    </Text>
+                </View>
+
+                <View style={{ flexDirection: 'row' }}>
+                    <Text style={styles.card_label_name} >
+                        Nome
+                    </Text>
+
+                    <Text style={styles.card_label_validate} >
+                        Validate
+                    </Text>
+
+                    <Text style={styles.card_label_cvv} >
+                        CVV
+                    </Text>
+                </View>
+
+                <View style={{ flexDirection: 'row' }}>
+                    <Text style={styles.card_name} >
+                        Maria de Fátima da Silva
+                    </Text>
+
+                    <Text style={styles.card_validate} >
+                        05/10
+                    </Text>
+
+                    <Text style={styles.card_cvv} >
+                        000
+                    </Text>
+                </View>
 
             </View>
 
             <View style={{
-                marginTop: '7%',
+                marginTop: '3%',
                 width: '90%',
-                height: '63%',
+                // height: '45%',
             }}>
                 <Purchase navigation={options.navigation}></Purchase>
 
