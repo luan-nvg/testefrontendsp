@@ -3,70 +3,18 @@ import React, { Component } from 'react';
 import Buttom from '../../atoms/Button';
 import { styles } from './styles';
 import Purchase from '../../organism/Form/Purchase';
+import CardCredit from '../../molecule/CardCredit';
 
 const Payment = (options) => {
-    // options.navigation.state.params.name
-    // console.log(options.navigation.getParam('name'));
-    // const { itemId, otherParam } = route.params;
-
     return (
         <ScrollView>
-
             <View style={styles.container}>
-                <View style={styles.card}>
-                    <View style={{ flexDirection: 'row' }}>
-                        <View style={styles.chip} />
-                        <View style={{ marginLeft: '60%', position: "absolute", }}>
-                            <View style={styles.circleOne}></View>
-                            <View style={styles.circleTwo}></View>
-                        </View>
-                    </View>
-
-                    <View>
-                        <Text style={styles.finaly_card} >
-                            •••• •••• •••• •••• 1234
-                    </Text>
-                    </View>
-
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={styles.card_label_name} >
-                            Nome
-                    </Text>
-
-                        <Text style={styles.card_label_validate} >
-                            Validate
-                    </Text>
-
-                        <Text style={styles.card_label_cvv} >
-                            CVV
-                    </Text>
-                    </View>
-
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={styles.card_name} >
-                            Maria de Fátima da Silva
-                    </Text>
-
-                        <Text style={styles.card_validate} >
-                            05/10
-                    </Text>
-
-                        <Text style={styles.card_cvv} >
-                            000
-                    </Text>
-                    </View>
-
-                </View>
-                <View style={{
-                    width: '90%',
-                }}>
-
+                <CardCredit />
+                <View style={styles.container_form}>
                     <Purchase navigation={options.navigation}></Purchase>
                 </View>
-
-            </View >
+            </View>
         </ScrollView>
-
     );
 };
 export default Payment;

@@ -2,22 +2,47 @@ import { Formik, useFormikContext } from 'formik';
 import * as yup from 'yup';
 
 import { Animated, View, Text, ScrollView } from 'react-native';
-import React, { Component, Fragment } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import { styles } from './styles';
 import { TextInput } from 'react-native-paper';
 import TextInputMask from 'react-native-text-input-mask';
 import Helpers from '../../../Helps';
 import Buttom from '../../../atoms/Button';
+import { connect, useDispatch, useSelector } from "react-redux";
 
-const AutoSubmitToken = () => {
-    // Grab values and submitForm from context
-    const { values, submitForm } = useFormikContext();
-    console.log(values);
-    return null;
-};
+const DispatchFormik = (dispatch, options) => {
+    let type = options.type;
+    let value = options.value;
+    let formik = options.formik;
+
+    formik.setFieldValue(type, value);
+    let values = formik.values;
+
+    for (const key in values) {
+        if (key == type) {
+            values[key] = value;
+        }
+    }
+
+    dispatch({
+        type: "CARD",
+        value: values,
+    });
+}
 
 const Purchase = (options) => {
 
+    const dispatch = useDispatch();
+
+    // const AutoSubmitToken = () => {
+    //     const { values, submitForm } = useFormikContext();
+
+    //     dispatch({
+    //         type: "CARD",
+    //         value: values,
+    //     });
+    //     return null;
+    // };
 
     var item = options.navigation.state.params;
     var descont = (item.price * 10) / 100;
@@ -61,15 +86,21 @@ const Purchase = (options) => {
                 })}
 
             >
-                {formik => (
-                    <ScrollView>
+                {
+                    formik => (
                         <Fragment>
 
                             <View style={styles.containerInput}>
                                 <TextInput
                                     mode={'outlined'}
                                     label="Número do cartão de crédito"
-                                    onChangeText={formik.handleChange('card_number')}
+                                    onChangeText={(value) => {
+                                        DispatchFormik(dispatch, {
+                                            formik: formik,
+                                            type: 'card_number',
+                                            value
+                                        })
+                                    }}
                                     onBlur={formik.handleBlur('card_number')}
                                     keyboardType='decimal-pad'
                                     autoCapitalize="words" //verificar oq é 
@@ -94,7 +125,14 @@ const Purchase = (options) => {
                                 <TextInput
                                     mode={'outlined'}
                                     label="Nome"
-                                    onChangeText={formik.handleChange('name')}
+                                    onChangeText={(value) => {
+                                        DispatchFormik(dispatch, {
+                                            formik: formik,
+                                            type: 'name',
+                                            value
+                                        })
+                                    }}
+
                                     onBlur={formik.handleBlur('name')}
                                     autoCapitalize="words" //verificar oq é 
                                     maxLength={100}
@@ -113,7 +151,13 @@ const Purchase = (options) => {
                                 <TextInput
                                     mode={'outlined'}
                                     label="Validade"
-                                    onChangeText={formik.handleChange('validate')}
+                                    onChangeText={(value) => {
+                                        DispatchFormik(dispatch, {
+                                            formik: formik,
+                                            type: 'validate',
+                                            value
+                                        })
+                                    }}
                                     onBlur={formik.handleBlur('validate')}
                                     value={formik.values.validate}
                                     keyboardType='decimal-pad'
@@ -134,7 +178,13 @@ const Purchase = (options) => {
                                 <TextInput
                                     mode={'outlined'}
                                     label="CVV"
-                                    onChangeText={formik.handleChange('cvv')}
+                                    onChangeText={(value) => {
+                                        DispatchFormik(dispatch, {
+                                            formik: formik,
+                                            type: 'cvv',
+                                            value
+                                        })
+                                    }}
                                     onBlur={formik.handleBlur('cvv')}
                                     value={formik.values.cvv}
                                     keyboardType='decimal-pad'
@@ -222,12 +272,8 @@ const Purchase = (options) => {
                                 ></Buttom>
                             </View>
 
-                            <AutoSubmitToken />
-
-
                         </Fragment>
-                    </ScrollView>
-                )}
+                    )}
             </Formik>
         </View >
     );
