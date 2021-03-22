@@ -28,29 +28,37 @@ const CardCredit = (options) => {
             <View style={{ flexDirection: 'row' }}>
                 <Text style={styles.card_label_name} >
                     Nome
-                    </Text>
+                </Text>
 
                 <Text style={styles.card_label_validate} >
                     Validade
-                    </Text>
+                </Text>
 
                 <Text style={styles.card_label_cvv} >
                     CVV
-                    </Text>
+                </Text>
             </View>
 
             <View style={{ flexDirection: 'row' }}>
-                <Text style={styles.card_name} >
-                    {card.name}
-                </Text>
+                <View style={styles.division_card_name}>
+                    <Text style={styles.card_name} >
+                        {card.name}
+                    </Text>
+                </View>
 
-                <Text style={styles.card_validate} >
-                    {card.validate}
-                </Text>
+                <View style={styles.division_card_validate}>
+                    <Text style={styles.card_validate} >
+                        {card.validate}
+                    </Text>
+                </View>
 
-                <Text style={styles.card_cvv} >
-                    {card.cvv}
-                </Text>
+                <View style={styles.division_card_cvv}>
+
+                    <Text style={styles.card_cvv} >
+                        {card.cvv}
+                    </Text>
+                </View>
+
             </View>
 
         </View>

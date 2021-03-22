@@ -31,19 +31,8 @@ const DispatchFormik = (dispatch, options) => {
 }
 
 const Purchase = (options) => {
-
     const dispatch = useDispatch();
-
-    // const AutoSubmitToken = () => {
-    //     const { values, submitForm } = useFormikContext();
-
-    //     dispatch({
-    //         type: "CARD",
-    //         value: values,
-    //     });
-    //     return null;
-    // };
-
+    
     var item = options.navigation.state.params;
     var descont = (item.price * 10) / 100;
     var total = item.price - descont;
@@ -51,6 +40,8 @@ const Purchase = (options) => {
     var descont_format = '- ' + Helpers.formatBr(descont);
     var value_package = Helpers.formatBr(item.price);
     var total_format = Helpers.formatBr(total);
+
+
     return (
         <View styles={{
             borderWidth: 15,

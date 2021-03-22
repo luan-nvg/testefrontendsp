@@ -1,9 +1,15 @@
 
 const Helpers = {
 
-    formatBr: (value) => {
-        value = value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
-        return value;
+    formatBr: (value, cifr = true) => {
+        var numero = value.toFixed(2).split('.');
+        numero[0] = numero[0].split(/(?=(?:...)*$)/).join('.');
+        var format = numero.join(',');
+
+        if (cifr) {
+            format = "R$ " + format
+        }
+        return format;
     },
 
     formatCardNumber: (value) => {

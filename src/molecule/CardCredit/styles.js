@@ -77,18 +77,34 @@ export const styles = StyleSheet.create({
         marginLeft: '10%'
     },
 
+    division_card_name: {
+        width: '55%',
+        marginLeft: '5%'
+
+    },
     card_name: {
         fontFamily: 'FreeSansMedium',
         fontSize: 13,
         color: "white",
-        marginLeft: '5%'
     },
+
+    division_card_validate: {
+        width: '13%',
+        marginLeft: '1%'
+    },
+
     card_validate: {
         fontFamily: 'FreeSansMedium',
         fontSize: 13,
         color: "white",
         marginLeft: '15%'
     },
+
+    division_card_cvv: {
+        width: '13%',
+        marginLeft: '10%'
+    },
+
     card_cvv: {
         fontFamily: 'FreeSansMedium',
         fontSize: 13,
