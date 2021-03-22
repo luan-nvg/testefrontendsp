@@ -102,7 +102,7 @@ const Purchase = (options) => {
                         <View style={styles.sideBySideSpace}>
                             <TextInput
                                 mode={'outlined'}
-                                label="validate"
+                                label="Validade"
                                 onChangeText={formik.handleChange('validate')}
                                 onBlur={formik.handleBlur('validate')}
                                 value={formik.values.validate}
@@ -203,8 +203,8 @@ const Purchase = (options) => {
                             title={'Pagar'}
                             onPress={
                                 () => {
-                                    console.log(options.data.item);
-                                    options.navigation.navigate('Payment', options.data.item);
+
+                                    options.navigation.navigate('PurchaseMade');
                                 }
                             }
                             padding={'3%'}

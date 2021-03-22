@@ -37,6 +37,7 @@ export const styles = StyleSheet.create({
         fontSize: 15,
     },
     price: {
+        fontFamily: 'FreeSansLight',
         color: '#707070',
         marginLeft: '28%',
         fontSize: 15,
@@ -47,6 +48,7 @@ export const styles = StyleSheet.create({
     },
 
     discount: {
+        fontFamily: 'FreeSansLight',
         color: 'red',
         marginLeft: '51%',
         fontSize: 15,
@@ -58,11 +60,10 @@ export const styles = StyleSheet.create({
 
     },
     total: {
+        fontFamily: 'FreeSansBold',
         color: '#707070',
         marginLeft: '58%',
         fontSize: 20,
-        fontFamily: 'FreeSansBold',
-        fontWeight: 'bold',
     },
     TextInvalid: {
 

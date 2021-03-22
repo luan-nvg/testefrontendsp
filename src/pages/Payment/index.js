@@ -12,6 +12,16 @@ const Payment = (options) => {
     return (
         <View style={styles.container}>
             <View style={styles.card}>
+                <View style={{ flexDirection: 'row' }}>
+                    <View style={styles.chip} />
+                    <View style={{ marginLeft: '60%', position: "absolute", }}>
+                        <View style={styles.circleOne}></View>
+                        <View style={styles.circleTwo}></View>
+                    </View>
+
+
+                </View>
+
 
             </View>
 
@@ -19,14 +29,12 @@ const Payment = (options) => {
                 marginTop: '7%',
                 width: '90%',
                 height: '63%',
-                // backgroundColor: "#7BBDF5",
-
             }}>
                 <Purchase navigation={options.navigation}></Purchase>
 
             </View>
 
-        </View>
+        </View >
     );
 };
 export default Payment;

@@ -29,7 +29,7 @@ const Routes = createStackNavigator({
     },
     PurchaseMade: {
         screen: PurchaseMade,
-        navigationOptions: ({ navigation }) => (Header({ title: 'Produtos' })),
+        navigationOptions: ({ navigation }) => (Header({ title: 'Pagamento com Cartão' })),
     },
 
     Payment: {
