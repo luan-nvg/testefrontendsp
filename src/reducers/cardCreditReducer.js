@@ -4,7 +4,6 @@ const initialState = {
 };
 // Redux: Counter Reducer
 const cardCreditReducer = (state = initialState, action) => {
-    console.log(action.type);
     switch (action.type) {
         case 'CARD': {
             return {

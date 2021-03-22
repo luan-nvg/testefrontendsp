@@ -41,12 +41,6 @@ const apiMiddleware = ({ dispatch }) => next => action => {
         .catch(error => {
             dispatch(apiError(error));
             onFailure(error);
-            console.log("Só da erro");
-            console.log(error);
-
-            // if (error.response && error.response.status === 403) {
-            //     dispatch(accessDenied(url));
-            // }
         })
         .finally(() => {
             if (label) {

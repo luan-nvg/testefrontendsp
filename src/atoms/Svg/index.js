@@ -3,9 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const Svg = (options) => {
     var [icon, setIcon] = useState(<View></View>);
-    console.log(options);
     useEffect(async () => {
-        console.log(options.name);
         var name = options.name != undefined ? options.name : '';
         let importedIcon = await import('./IndexView');
 

@@ -32,16 +32,10 @@ const DispatchFormik = (dispatch, options) => {
 
 const save = (options, dispatch, values) => {
     options.navigation.navigate('PurchaseMade');
-
     dispatch({
         type: "CARD",
         value: {},
     });
-
-    // var itens = Object.assign(options.navigation.state.params, values);
-
-    // console.log(itens);
-
 }
 
 
