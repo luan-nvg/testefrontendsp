@@ -19,8 +19,8 @@ const PurchaseMade = (options) => {
 
             <View style={styles.svg}>
                 <Svg
-                    width={200}
-                    height={200}
+                    width={160}
+                    height={160}
                     name={'Success'}
                 />
             </View>

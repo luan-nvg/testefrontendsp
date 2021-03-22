@@ -11,7 +11,7 @@ const Cart = (options) => {
         }}>
             <TouchableOpacity activeOpacity={0.7}
                 onPress={() => {
-                    options.navigation.navigate('Counter');
+                    options.navigation.navigate('PurchaseMade');
                 }}>
                 <Svg
                     name={'Cart'}
