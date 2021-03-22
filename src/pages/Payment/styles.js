@@ -6,14 +6,18 @@ import {
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "red",
+        backgroundColor: "white",
+        alignItems: 'center',
     },
     card: {
         marginTop: '7%',
-        width: '65%',
-        height: '90%',
-        backgroundColor: "white",
-        borderRadius: 40,
+        width: '85%',
+        height: '25%',
+        backgroundColor: "#7BBDF5",
+        borderRadius: 20,
         elevation: 3,
+    },
+    item: {
+        alignItems: 'center',
     },
 });

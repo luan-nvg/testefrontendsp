@@ -16,7 +16,6 @@ export const styles = StyleSheet.create({
     opacity: {
         alignItems: 'center',
         backgroundColor: '#FF8686',
-        padding: '5%',
         borderRadius: 15,
     }
 });

@@ -9,7 +9,7 @@ const Button = (item) => {
                 width: item.width
             }}>
                 <TouchableOpacity
-                    style={styles.opacity}
+                    style={[styles.opacity, { padding: item.padding ? item.padding : '5%' }]}
                     onPress={() => {
                         item.onPress();
                     }}
