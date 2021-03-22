@@ -2,12 +2,16 @@ import { View } from 'react-native';
 import React, { useState, useEffect } from 'react';
 
 const Svg = (options) => {
-    let [icon, setIcon] = useState(<View></View>);
-
+    var [icon, setIcon] = useState(<View></View>);
+    console.log(options);
     useEffect(async () => {
-        var teste = 'Success';
+        console.log(options.name);
+        var name = options.name != undefined ? options.name : '';
         let importedIcon = await import('./IndexView');
-        setIcon(importedIcon[teste](options));
+
+        if (typeof importedIcon[name] == 'function') {
+            setIcon(importedIcon[name](options));
+        }
     }, []);
 
     return (

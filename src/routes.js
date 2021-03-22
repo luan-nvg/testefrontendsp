@@ -9,32 +9,43 @@ import Payment from './pages/Payment';
 import Header from './atoms/Header/'
 import Cart from './atoms/Cart/'
 
+
+const buttom = (navigation) => {
+    var teste = {
+        headerRight: (
+            () => (
+                <Cart navigation={navigation}></Cart>
+            )
+        )
+    }
+    return teste;
+}
+
 const Routes = createStackNavigator({
     VirtualStore: {
         screen: VirtualStore,
         navigationOptions: ({ navigation }) => {
-            let buttom = {
-                headerRight: (
-                    () => (
-                        <Cart navigation={navigation}></Cart>
-                    )
-                )
-            }
-            return Object.assign(buttom, Header({ title: 'Loja Virtual' }))
+            return Object.assign(buttom(navigation), Header({ title: 'Loja Virtual' }))
         },
     },
     Counter: {
         screen: Counter,
-        navigationOptions: ({ navigation }) => (Header({ title: 'Contador' })),
+        navigationOptions: ({ navigation }) => {
+            return Header({ title: 'Contador' })
+        },
     },
     PurchaseMade: {
         screen: PurchaseMade,
-        navigationOptions: ({ navigation }) => (Header({ title: 'Pagamento com Cartão' })),
+        navigationOptions: ({ navigation }) => {
+            return Object.assign(buttom(navigation), Header({ title: 'Pagamento com Cartão' }))
+        },
     },
 
     Payment: {
         screen: Payment,
-        navigationOptions: ({ navigation }) => (Header({ title: 'Pagamento com Cartão' })),
+        navigationOptions: ({ navigation }) => {
+            return Object.assign(buttom(navigation), Header({ title: 'Pagamento com Cartão' }))
+        },
     }
 });
 

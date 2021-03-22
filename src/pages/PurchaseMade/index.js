@@ -21,6 +21,7 @@ const PurchaseMade = (options) => {
                 <Svg
                     width={200}
                     height={200}
+                    name={'Success'}
                 />
             </View>
             <View style={styles.division_desc}>
